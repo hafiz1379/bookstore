@@ -24,4 +24,8 @@ code {
     Consolas,
     'Courier New',
     monospace;
+  -webkit-font-feature-settings: "liga" 1, "calt" 0;
+  -moz-font-feature-settings: "liga=1, calt=0";
+  font-feature-settings: "liga" 1, "calt" 0;
+  font-variant-ligatures: common-ligatures contextual;
 }
