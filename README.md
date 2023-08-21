@@ -129,7 +129,6 @@ Hafizullah Rasa
 👤 **Hafizullah Rasa**
 
 - GitHub: [@githubhandle](https://github.com/hafiz1379)
-- Twitter: [@twitterhandle](https://twitter.com/Hafizrasa1379?s=35)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/hafizullah-rasa-8436a1257/)
 
 
