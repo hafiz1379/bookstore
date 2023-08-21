@@ -117,17 +117,6 @@ To run the project, execute the following command:
 
 Open index.html using live server extension.
 
-### Run tests
-
-To run tests, run the following command:
-
-> Coming soon
-
-### Deployment
-
-You can deploy this project using:
-
-> Coming soon
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -140,7 +129,6 @@ Hafizullah Rasa
 👤 **Hafizullah Rasa**
 
 - GitHub: [@githubhandle](https://github.com/hafiz1379)
-- Twitter: [@twitterhandle](https://twitter.com/Hafizrasa1379?s=35)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/hafizullah-rasa-8436a1257/)
 
 
