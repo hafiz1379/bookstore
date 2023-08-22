@@ -1,12 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { useSelector, useDispatch } from 'react-redux';
 import Book from './books';
+import { removeBook } from '../redux/books/booksSlice';
 
-function BookList(props) {
-  const { books, onDelete } = props;
+function BookList() {
+  const dispatch = useDispatch();
+  const books = useSelector((state) => state.books.books);
 
   const handleDelete = (id) => {
-    onDelete(id);
+    dispatch(removeBook(id));
   };
 
   return (
@@ -14,25 +16,16 @@ function BookList(props) {
       <h2>Book List</h2>
       {books.map((book) => (
         <Book
-          key={book.id}
+          key={book.item_id}
           title={book.title}
           author={book.author}
-          onDelete={() => handleDelete(book.id)}
+          category={book.category}
+          item_id={book.item_id}
+          handleDelete={() => handleDelete(book.item_id)}
         />
       ))}
     </div>
   );
 }
-
-BookList.propTypes = {
-  books: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-      author: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
-  onDelete: PropTypes.func.isRequired,
-};
 
 export default BookList;
