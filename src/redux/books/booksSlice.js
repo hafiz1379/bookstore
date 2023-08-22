@@ -3,21 +3,21 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = [
   {
     item_id: 'item1',
-    title: 'The Da Vinci Code',
-    author: 'Dan Brown',
-    category: 'Action',
+    title: 'The Great Gatsby',
+    author: 'John Smith',
+    category: 'Fiction',
   },
   {
     item_id: 'item2',
-    title: 'Good Omens',
-    author: 'Terry Pratchett',
-    category: 'Comedy',
+    title: 'Anna Karenina',
+    author: 'Leo Tolstoy',
+    category: 'Fiction',
   },
   {
     item_id: 'item3',
-    title: 'George Orwell',
-    author: 'Animal Farm',
-    category: 'Fiction',
+    title: 'The Selfish Gene',
+    author: 'Richard Dawkins',
+    category: 'Nonfiction',
   },
 ];
 
