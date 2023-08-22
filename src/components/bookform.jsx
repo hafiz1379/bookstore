@@ -1,16 +1,27 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { addBook } from '../redux/books/booksSlice';
 
-function BookForm({ onAdd }) {
+function BookForm() {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
+  const dispatch = useDispatch();
+
+  const categoryOptions = ['Fiction', 'Action', 'Nonfiction', 'Comedy'];
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newBook = { title, author };
-    onAdd(newBook);
+    const newBook = {
+      item_id: `item${Date.now()}`,
+      title,
+      author,
+      category,
+    };
+    dispatch(addBook(newBook));
     setTitle('');
     setAuthor('');
+    setCategory('');
   };
 
   return (
@@ -39,14 +50,27 @@ function BookForm({ onAdd }) {
             />
           </label>
         </div>
+        <div>
+          <label htmlFor="category-select">
+            Category:
+            <select
+              id="category-select"
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}
+            >
+              <option value="">Select a category</option>
+              {categoryOptions.map((category) => (
+                <option key={category} value={category}>
+                  {category}
+                </option>
+              ))}
+            </select>
+          </label>
+        </div>
         <button type="submit">Add Book</button>
       </form>
     </div>
   );
 }
-
-BookForm.propTypes = {
-  onAdd: PropTypes.func.isRequired,
-};
 
 export default BookForm;
