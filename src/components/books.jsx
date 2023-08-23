@@ -6,33 +6,36 @@ function Book(props) {
     title, author, category, handleDelete,
   } = props;
 
-  const handleClick = () => {
-    handleDelete();
-  };
-
   return (
     <div>
-      <h3>{title}</h3>
+      <h3>{title || 'No Title'}</h3>
       <p>
         Author:
         {' '}
-        {author}
+        {author || 'Unknown'}
       </p>
       <p>
         Category:
         {' '}
-        {category}
+        {category || 'Unknown'}
       </p>
-      <button type="button" onClick={handleClick}>Delete</button>
+      <button type="button" onClick={handleDelete}>Delete</button>
     </div>
   );
 }
 
 Book.propTypes = {
-  title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
-  category: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  author: PropTypes.string,
+  category: PropTypes.string,
   handleDelete: PropTypes.func.isRequired,
+
+};
+
+Book.defaultProps = {
+  title: '',
+  author: '',
+  category: '',
 };
 
 export default Book;
