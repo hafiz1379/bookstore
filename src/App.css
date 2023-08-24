@@ -82,8 +82,8 @@ body {
 }
 
 .header-ul a:hover,
-.header-ul a:focus, 
-.header-ul a:active { 
+.header-ul a:focus,
+.header-ul a:active {
   opacity: 1;
 }
 
@@ -109,7 +109,7 @@ form {
   font-weight: 700;
   letter-spacing: -0.18px;
   color: #888;
-  font-family: Montserrat,sans-serif;
+  font-family: Montserrat, sans-serif;
   margin-left: 22px;
 }
 
