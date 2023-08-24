@@ -39,7 +39,6 @@ function Book(props) {
       <div className="book-last">
         <p>
           CURRENT CHAPTER
-
         </p>
         <p>
           Introduction
