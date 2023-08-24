@@ -17,7 +17,7 @@ function App() {
         <nav>
           <ul className="header-ul">
             <li>
-              <Link to="/">HOME</Link>
+              <Link to="/" className="logo">Bookstore CMS</Link>
             </li>
             <li>
               <Link to="/">BOOKS</Link>
