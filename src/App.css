@@ -1,7 +1,299 @@
-*body {
-  background-color: #fff;
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  background-color: #f5f6fa;
+}
+
+#root {
+  margin: 5% 4%;
+  display: flex;
+  background-color: #fafafa;
+  box-shadow: 0 0 60px 0 rgb(0 0 0 / 5%);
 }
 
 .app {
-  margin-left: 20px;
+  width: 100%;
+}
+
+.app nav {
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid #dfdfdf;
+  height: 85px;
+  margin-top: -14px;
+}
+
+.app ul {
+  display: flex;
+  gap: 32px;
+  list-style-type: none;
+  align-items: center;
+  padding: 0 2%;
+  padding-top: 18px;
+  margin-left: 30px;
+}
+
+.app ul li {
+  width: fit-content;
+}
+
+.app ul .logo {
+  color: #0290ff;
+  font-size: 1.875rem;
+  font-weight: bold;
+  opacity: 1;
+}
+
+.img {
+  display: flex;
+  justify-content: flex-end;
+  width: 64%;
+  margin-left: 60px;
+}
+
+.img img {
+  border: 1px solid #e8e8e8;
+  border-radius: 34px;
+  cursor: pointer;
+  padding: 8px;
+  width: 44px;
+  margin-left: 430px;
+}
+
+/* stylelint-disable selector-class-pattern */
+.headerName {
+  font-family: Montserrat, sans-serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #0290ff;
+  padding-left: 5%;
+}
+
+.header-ul a {
+  font-family: Montserrat, sans-serif;
+  font-size: 0.813rem;
+  color: #121212;
+  letter-spacing: 1.9px;
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+.header-ul a:hover,
+.header-ul a:focus,
+.header-ul a:active {
+  opacity: 1;
+}
+
+hr {
+  height: 0.125rem;
+  border: 1px solid #e8e8e8;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  padding: 0 2%;
+  justify-content: flex-start;
+  gap: 17px;
+}
+
+.form-div {
+  padding: 30px;
+}
+
+.form-div h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.18px;
+  color: #888;
+  font-family: Montserrat, sans-serif;
+  margin-left: 22px;
+}
+
+#title-input {
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  font-size: 1rem;
+  letter-spacing: -0.15px;
+  color: #121212;
+  width: 450px;
+}
+
+#author-input {
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  font-size: 1rem;
+  letter-spacing: -0.15px;
+  color: #121212;
+}
+
+#category-select {
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  font-size: 1rem;
+  letter-spacing: -0.15px;
+  color: #121212;
+}
+
+.form-div button {
+  cursor: pointer;
+  width: 20%;
+  padding: 12px;
+  border-radius: 3px;
+  background-color: #0290ff;
+  border: none;
+  letter-spacing: 0.5px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Roboto Slab", serif;
+}
+
+.oval-2 {
+  width: 5.25rem;
+  height: 5.25rem;
+  border-radius: 50%;
+  border: 5px solid #307bbe;
+  border-top: 5px solid #e8e8e8;
+  transform: rotate(-45deg);
+  margin-top: 15px;
+}
+
+.books-list {
+  display: flex;
+  padding: 4%;
+  gap: 26px;
+  flex-direction: column;
+}
+
+.bookhead {
+  display: flex;
+  padding: 32px;
+  border: 1px solid lightgray;
+  background: white;
+  height: 180px;
+  border-radius: 7px;
+}
+
+.book-info {
+  width: 42%;
+  word-wrap: break-word;
+}
+
+.percentage {
+  padding: 28px 2%;
+}
+
+.percentage p:nth-child(1) {
+  font-size: 37px;
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat, sans-serif;
+  color: #121212;
+}
+
+.percentage p:nth-child(2) {
+  font-size: 0.875rem;
+  opacity: 0.5;
+  margin: 0;
+}
+
+.book-info p:nth-child(1) {
+  font-weight: 700;
+  color: #121212;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.875rem;
+  opacity: 0.5;
+  margin: 1px;
+}
+
+.book-info h3 {
+  font-size: 1.375rem;
+  letter-spacing: -0.2px;
+  font-weight: 700;
+  color: #121212;
+  margin: 1px;
+  font-family: "Roboto Slab", serif;
+}
+
+.book-info p:nth-child(3) {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #4386bf;
+  margin: 1px;
+  font-family: "Roboto Slab", serif;
+}
+
+.booksbuttons {
+  display: flex;
+  align-items: center;
+  margin-top: 1.313rem;
+}
+
+.booksbuttons hr {
+  width: 0.125rem;
+  height: 1.5rem;
+  background-color: #e8e8e8;
+  margin: 0 1rem;
+}
+
+.booksbuttons button {
+  font-family: "Roboto Slab", serif;
+  background-color: transparent;
+  border: none;
+  color: #4386bf;
+  font-size: 0.875rem;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.book-hr {
+  width: 1px;
+  height: 70px;
+}
+
+.book-last p:nth-child(1) {
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  color: #121212;
+  font-size: 0.813rem;
+  opacity: 0.5;
+  margin-top: 0.438rem;
+  letter-spacing: -0.4px;
+}
+
+.book-last p:nth-child(2) {
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  color: #121212;
+  font-size: 1rem;
+  margin-top: 0.438rem;
+  letter-spacing: -0.4px;
+  font-stretch: normal;
+  font-style: normal;
+}
+
+.book-last button {
+  cursor: pointer;
+  border: none;
+  background-color: #0290ff;
+  border-radius: 3px;
+  padding: 8px 24px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+
+.cat-page {
+  padding-left: 50px;
 }

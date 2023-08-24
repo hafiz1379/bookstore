@@ -15,12 +15,18 @@ function App() {
     <Router>
       <div className="app">
         <nav>
-          <ul>
+          <ul className="header-ul">
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/" className="logo">Bookstore CMS</Link>
             </li>
             <li>
-              <Link to="/categories">Categories</Link>
+              <Link to="/">BOOKS</Link>
+            </li>
+            <li>
+              <Link to="/categories">CATEGORIES</Link>
+            </li>
+            <li className="img">
+              <img src="profile.svg" alt="img" />
             </li>
           </ul>
         </nav>
@@ -29,7 +35,6 @@ function App() {
             path="/"
             element={(
               <div>
-                <h1>My Book Collection</h1>
                 <Booklist />
                 <Bookform />
               </div>

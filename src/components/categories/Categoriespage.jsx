@@ -2,9 +2,9 @@ import React from 'react';
 
 function CategoriesPage() {
   return (
-    <div>
+    <div className="cat-page">
       <h1>Categories Page</h1>
-      <p>This is the categories page of our application.</p>
+      <p>Under constraction.</p>
     </div>
   );
 }
